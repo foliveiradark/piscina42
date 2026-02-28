@@ -7,7 +7,7 @@ void ft_putchar(char abobra)
 
 void rush(int largura, int altura)
 {
-    int n = 0;
+    int n = 1;
     int quebra_de_linha = largura + 1;
     int total = quebra_de_linha * altura;
 
@@ -44,11 +44,16 @@ void rush(int largura, int altura)
             ft_putchar('*');
         n++;
     }
+	ft_putchar('\n');
 }
 
 int main(void)
 {
-    rush(4, 15);
+	rush(8, 3);
+
+    rush(7, 15);
+
 	rush(10, 5);
+
 	rush(10, 5);
 }
