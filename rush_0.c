@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 void ft_putchar(char abobra)
 {
@@ -16,13 +15,13 @@ void rush(int largura, int altura)
     {
         //CANTOS
         if(n <= largura && n % quebra_de_linha == 1)
-            ft_putchar('O');
-        else if (n <= largura && n % quebra_de_linha == largura)
-            ft_putchar('O');
-        else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1)
-            ft_putchar('O');
-        else if(n >= total - quebra_de_linha && n % quebra_de_linha == largura)
-            ft_putchar('O');
+        	ft_putchar('A');
+		else if (n <= largura && n % quebra_de_linha == largura)
+			ft_putchar('B');
+		else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1)
+			ft_putchar('C');
+		else if(n >= total - quebra_de_linha && n % quebra_de_linha == largura)
+			ft_putchar('D');
 
         //QUEBRA DE LINHA
         else if(n % quebra_de_linha == 0)
@@ -30,24 +29,26 @@ void rush(int largura, int altura)
 
         //PAREDES
         else if (n % quebra_de_linha == 1)
-            ft_putchar('|');
+			ft_putchar('[');
         else if (n % quebra_de_linha == largura)
-            ft_putchar('|');
+            ft_putchar(']');
 
         //CHAO E TETO
         else if (n <= largura)
-            ft_putchar('-');
+            ft_putchar('+');
         else if (n >= total - quebra_de_linha)
-            ft_putchar('-');
+            ft_putchar('=');
 
         //medo eterno de todas as verdades
         else
-            ft_putchar(' ');
+            ft_putchar('*');
         n++;
     }
 }
 
 int main(void)
 {
-    rush(1, 5);
+    rush(4, 15);
+	rush(10, 5);
+	rush(10, 5);
 }
