@@ -6,7 +6,7 @@
 /*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 15:47:22 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/02/28 18:03:20 by fcampos-         ###   ########.fr       */
+/*   Updated: 2026/02/28 18:14:35 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // CBBBC
 
 #include <unistd.h>
-#include <stdio.h>
 
 void ft_putchar(char c)
 {
@@ -27,8 +26,6 @@ void rush_fc(int largura, int altura )
     int n = 0;
     int quebra_de_linha = largura + 1;
     int total = quebra_de_linha * altura;
-
-    printf("%d\n"">%d\n"">%d\n", n, quebra_de_linha, total);
 
     while(n < total)
     {
