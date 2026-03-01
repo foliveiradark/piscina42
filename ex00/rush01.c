@@ -6,7 +6,7 @@
 /*   By: dode-lim <dode-lim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 15:37:47 by hvaini-d          #+#    #+#             */
-/*   Updated: 2026/03/01 16:38:46 by dode-lim         ###   ########.fr       */
+/*   Updated: 2026/03/01 16:48:39 by dode-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,7 @@ void	rush(int x, int y)
 	has_printed = 0;
 	while (n < total)
 	{
-		if (print_sides(n, x, y, quebra_de_linha) == 1)
-			n = n;
-		else
+		if (print_sides(n, x, y, quebra_de_linha) == 0)
 			print_body(n, x, y, quebra_de_linha);
 		n++;
 	}
