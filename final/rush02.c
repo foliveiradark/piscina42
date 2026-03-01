@@ -1,56 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.c                                           :+:      :+:    :+:   */
+/*   rush_fcampos-.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hvaini-d <hvaini-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/28 15:37:47 by hvaini-d          #+#    #+#             */
-/*   Updated: 2026/03/01 14:34:36 by hvaini-d         ###   ########.fr       */
+/*   Created: 2026/02/28 15:47:22 by fcampos-          #+#    #+#             */
+/*   Updated: 2026/03/01 14:25:02 by hvaini-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char letter);
 
-int	print_cantos(int n, int x, int y, int quebra_de_linha)
+int	print_cantos (int n, int x, int y, int quebra_de_linha)
 {
 	int	total;
 
 	total = y * quebra_de_linha;
-	if (n <= x && n % quebra_de_linha == 1)
-		ft_putchar('/');
-	else if (n <= x && n % quebra_de_linha == x)
-		ft_putchar('\\');
-	else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1)
-		ft_putchar('\\');
-	else if (n >= total - quebra_de_linha && n % quebra_de_linha == x)
-		ft_putchar('/');
+	if (n <= x && n % quebra_de_linha == 1
+		|| n <= x && n % quebra_de_linha == x)
+		ft_putchar ('A');
+	else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1
+		|| n >= total - quebra_de_linha && n % quebra_de_linha == x)
+		ft_putchar ('C');
 	else
 		return (0);
 	return (1);
 }
 
-int	print_body(int n, int x, int y, int quebra_de_linha)
+int	print_body (int n, int x, int y, int quebra_de_linha)
 {
 	int	total;
 
 	total = y * quebra_de_linha;
 	if (n % quebra_de_linha == 0)
 		ft_putchar('\n');
-	else if (n % quebra_de_linha == 1)
-		ft_putchar('*');
-	else if (n % quebra_de_linha == x)
-		ft_putchar('*');
-	else if (n <= x)
-		ft_putchar('*');
-	else if (n >= total - quebra_de_linha)
-		ft_putchar('*');
+	else if (n % quebra_de_linha == 1 || n % quebra_de_linha == x)
+		ft_putchar('B');
+	else if (n <= x || n >= total - quebra_de_linha)
+		ft_putchar('B');
 	else
 		ft_putchar(' ');
 	return (1);
 }
 
-void	trigger_error(void)
+void	trigger_error (void)
 {
 	ft_putchar('E');
 	ft_putchar('R');
@@ -76,7 +70,7 @@ void	trigger_error(void)
 	ft_putchar('\n');
 }
 
-void	rush(int x, int y)
+void	rush (int x, int y)
 {
 	int	n;
 	int	quebra_de_linha;
@@ -89,7 +83,7 @@ void	rush(int x, int y)
 		return ;
 	}
 	n = 1;
-	quebra_de_linha = x + 1;
+	quebra_de_linha = x +1;
 	total = quebra_de_linha * y;
 	has_printed = 0;
 	while (n < total)
@@ -102,14 +96,3 @@ void	rush(int x, int y)
 	}
 	ft_putchar('\n');
 }
-
-// int	main(void)
-// {
-// 	rush (8, 3);
-// 	rush (7, 15);
-// 	rush (10, 5);
-// 	rush (10, 5);
-// 	rush (-10, 5);
-// 	rush (10, 0);
-// 	rush (10, -10);
-// }

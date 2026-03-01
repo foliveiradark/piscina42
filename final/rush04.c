@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.c                                           :+:      :+:    :+:   */
+/*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hvaini-d <hvaini-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 15:37:47 by hvaini-d          #+#    #+#             */
-/*   Updated: 2026/03/01 14:34:36 by hvaini-d         ###   ########.fr       */
+/*   Updated: 2026/03/01 14:35:53 by hvaini-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ int	print_cantos(int n, int x, int y, int quebra_de_linha)
 
 	total = y * quebra_de_linha;
 	if (n <= x && n % quebra_de_linha == 1)
-		ft_putchar('/');
+		ft_putchar('A');
 	else if (n <= x && n % quebra_de_linha == x)
-		ft_putchar('\\');
+		ft_putchar('C');
 	else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1)
-		ft_putchar('\\');
+		ft_putchar('C');
 	else if (n >= total - quebra_de_linha && n % quebra_de_linha == x)
-		ft_putchar('/');
+		ft_putchar('A');
 	else
 		return (0);
 	return (1);
@@ -38,13 +38,13 @@ int	print_body(int n, int x, int y, int quebra_de_linha)
 	if (n % quebra_de_linha == 0)
 		ft_putchar('\n');
 	else if (n % quebra_de_linha == 1)
-		ft_putchar('*');
+		ft_putchar('B');
 	else if (n % quebra_de_linha == x)
-		ft_putchar('*');
+		ft_putchar('B');
 	else if (n <= x)
-		ft_putchar('*');
+		ft_putchar('B');
 	else if (n >= total - quebra_de_linha)
-		ft_putchar('*');
+		ft_putchar('B');
 	else
 		ft_putchar(' ');
 	return (1);
