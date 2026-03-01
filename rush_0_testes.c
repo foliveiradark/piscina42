@@ -6,7 +6,7 @@
 /*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 15:37:47 by hvaini-d          #+#    #+#             */
-/*   Updated: 2026/02/28 18:03:42 by fcampos-         ###   ########.fr       */
+/*   Updated: 2026/02/28 18:49:08 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	print_cantos(int n, int largura, int altura, int quebra_de_linha)
 		ft_putchar('B');
 	else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1)
 		ft_putchar('C');
-	else if (n >= total - quebra_de_li5,nha && n % quebra_de_linha == largura)
+	else if (n >= total - quebra_de_linha && n % quebra_de_linha == largura)
 		ft_putchar('D');
 	else
 		return (0);
@@ -107,13 +107,15 @@ void	rush(int largura, int altura)
 	ft_putchar('\n');
 }
 
-// int	main(void)
-// {
-// 	rush (8, 3);
-// 	rush (7, 15);
-// 	rush (10, 5);
-// 	rush (10, 5);
-// 	rush (-10, 5);
-// 	rush (10, 0);
-// 	rush (10, -10);
-// }
+int	main(void)
+{
+	rush (8, 3);
+	rush (7, 15);
+	rush (10, 5);
+	rush (10, 5);
+	rush (-10, 5);
+	rush (10, 0);
+	rush (10, -10);
+
+	rush (30, 30);
+}
