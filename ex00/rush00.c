@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush_alecrist.c                                    :+:      :+:    :+:   */
+/*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alecrist <alecrist@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dode-lim <dode-lim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:34:50 by alecrist          #+#    #+#             */
-/*   Updated: 2026/03/01 15:38:17 by alecrist         ###   ########.fr       */
+/*   Updated: 2026/03/01 17:05:20 by dode-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char letter);
 
-void rush(int largura, int altura)
+void	rush(int width, int height)
 {
-    int n = 1;
-    int quebra_de_linha = largura + 1;
-    int total = quebra_de_linha * altura;
+	int	n;
+	int	break_line;
+	int	total;
 
-    while(n < total)
-    {
-        if(n <= largura && n % quebra_de_linha == 1)
-        	ft_putchar('o');
-		else if (n <= largura && n % quebra_de_linha == largura)
+	n = 1;
+	break_line = width + 1;
+	total = break_line * height;
+	while (n < total)
+	{
+		if (n <= width && n % break_line == 1
+			|| n <= width && n % break_line == width
+			|| n >= total - break_line && n % break_line == 1
+			|| n >= total - break_line && n % break_line == width)
 			ft_putchar('o');
-		else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1)
-			ft_putchar('o');
-		else if(n >= total - quebra_de_linha && n % quebra_de_linha == largura)
-			ft_putchar('o');
-        else if(n % quebra_de_linha == 0)
-            ft_putchar('\n');
-        else if (n % quebra_de_linha == 1 || n % quebra_de_linha == largura)
+		else if (n % break_line == 0)
+			ft_putchar('\n');
+		else if (n % break_line == 1 || n % break_line == width)
 			ft_putchar('|');
-        else if (n >= total - quebra_de_linha || n <= largura)
-            ft_putchar('-');
-        else
-            ft_putchar(' ');
-        n++;
-    }
+		else if (n >= total - break_line || n <= width)
+			ft_putchar('-');
+		else
+			ft_putchar(' ');
+		n++;
+	}
 	ft_putchar('\n');
 }

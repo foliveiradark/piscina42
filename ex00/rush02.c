@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush_fcampos-.c                                    :+:      :+:    :+:   */
+/*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hvaini-d <hvaini-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dode-lim <dode-lim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 15:47:22 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/03/01 14:25:02 by hvaini-d         ###   ########.fr       */
+/*   Updated: 2026/03/01 17:10:21 by dode-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char letter);
 
-int	print_cantos (int n, int x, int y, int quebra_de_linha)
+int	print_cantos(int n, int x, int y, int quebra_de_linha)
 {
 	int	total;
 
@@ -28,7 +28,7 @@ int	print_cantos (int n, int x, int y, int quebra_de_linha)
 	return (1);
 }
 
-int	print_body (int n, int x, int y, int quebra_de_linha)
+int	print_body(int n, int x, int y, int quebra_de_linha)
 {
 	int	total;
 
@@ -44,7 +44,7 @@ int	print_body (int n, int x, int y, int quebra_de_linha)
 	return (1);
 }
 
-void	trigger_error (void)
+void	trigger_error(void)
 {
 	ft_putchar('E');
 	ft_putchar('R');
@@ -70,7 +70,7 @@ void	trigger_error (void)
 	ft_putchar('\n');
 }
 
-void	rush (int x, int y)
+void	rush(int x, int y)
 {
 	int	n;
 	int	quebra_de_linha;
