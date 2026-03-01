@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dode-lim <dode-lim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hvaini-d <hvaini-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 15:47:22 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/03/01 17:10:21 by dode-lim         ###   ########.fr       */
+/*   Updated: 2026/03/01 17:41:56 by hvaini-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int	print_cantos(int n, int x, int y, int quebra_de_linha)
 	int	total;
 
 	total = y * quebra_de_linha;
-	if (n <= x && n % quebra_de_linha == 1
-		|| n <= x && n % quebra_de_linha == x)
+	if (((n <= x) && (n % quebra_de_linha == 1))
+		|| ((n <= x) && (n % quebra_de_linha == x)))
 		ft_putchar ('A');
-	else if (n >= total - quebra_de_linha && n % quebra_de_linha == 1
-		|| n >= total - quebra_de_linha && n % quebra_de_linha == x)
+	else if (((n >= total - quebra_de_linha) && (n % quebra_de_linha == 1))
+		|| ((n >= total - quebra_de_linha) && (n % quebra_de_linha == x)))
 		ft_putchar ('C');
 	else
 		return (0);
@@ -35,9 +35,9 @@ int	print_body(int n, int x, int y, int quebra_de_linha)
 	total = y * quebra_de_linha;
 	if (n % quebra_de_linha == 0)
 		ft_putchar('\n');
-	else if (n % quebra_de_linha == 1 || n % quebra_de_linha == x)
+	else if ((n % quebra_de_linha == 1) || (n % quebra_de_linha == x))
 		ft_putchar('B');
-	else if (n <= x || n >= total - quebra_de_linha)
+	else if ((n <= x) || (n >= total - quebra_de_linha))
 		ft_putchar('B');
 	else
 		ft_putchar(' ');
@@ -88,9 +88,7 @@ void	rush(int x, int y)
 	has_printed = 0;
 	while (n < total)
 	{
-		if (print_cantos(n, x, y, quebra_de_linha) == 1)
-			n = n;
-		else
+		if (print_cantos(n, x, y, quebra_de_linha) == 0)
 			print_body(n, x, y, quebra_de_linha);
 		n++;
 	}
