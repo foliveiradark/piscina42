@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/06 02:55:28 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/03/07 16:57:29 by fcampos-         ###   ########.fr       */
+/*   Created: 2026/03/11 15:27:46 by tiagoalm          #+#    #+#             */
+/*   Updated: 2026/03/11 20:06:09 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-/*
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-void	ft_print_alphabet(void)
-{
-	int	letter;
+char	*ft_strlowcase(char *str);
 
-	letter = 'a';
-	while (letter <= 'z')
+char	*ft_strlowcase(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		ft_putchar(letter);
-		letter++;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] += 32;
+		}
+		i++;
 	}
+	return (str);
 }
-*/
+
 int	main(void)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 13);
-	return(0);
+	char	c[] = "SOU MAIUSCULA";
+	ft_strlowcase(c);
+	printf("Entrada: SOU MAIUSCULA\n");
+	printf("Saída: %s\n", c);
+	return (0);
 }

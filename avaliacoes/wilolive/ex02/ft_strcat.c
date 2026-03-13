@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 20:13:00 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/03/07 16:52:22 by fcampos-         ###   ########.fr       */
+/*   Created: 2026/03/09 11:43:12 by wilolive          #+#    #+#             */
+/*   Updated: 2026/03/11 18:33:25 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<stdio.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str);
+
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	count;
+
+	count = 0;
+	while (str[count] != '\0')
+		count++;
+	return (count);
 }
 
-// int	main(void)
-// {
-// 	ft_putchar(52);
-// 	ft_putchar('2');
-// 	ft_putchar('\n');
-// 	return (0);
-// }
+char	*ft_strcat(char *dest, char *src)
+{
+	int	d_idx;
+	int	s_idx;
+
+	d_idx = ft_strlen(dest);
+	s_idx = 0;
+	while (src[s_idx] != '\0')
+	{
+		dest[d_idx] = src[s_idx];
+		d_idx++;
+		s_idx++;
+	}
+	dest[d_idx] = '\0';
+	return (dest);
+}
