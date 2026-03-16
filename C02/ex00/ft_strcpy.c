@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 17:18:31 by flavio            #+#    #+#             */
-/*   Updated: 2026/03/15 09:29:30 by flavio           ###   ########.fr       */
+/*   Updated: 2026/03/16 17:44:49 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
+// #include<unistd.h>
+// #include<stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (src[i] != '\0')
 	{
@@ -24,7 +24,7 @@ char	*ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return(dest);
+	return (dest);
 }
 
 /* char	*ft_strcpy(char *dest, char *src)
@@ -35,9 +35,9 @@ char	*ft_strcpy(char *dest, char *src)
 	while ((dest[i] = src[i]))
 		i++;
 	return(dest);
-}
- */
-int	main(void)
+} */
+
+/* int	main(void)
 {
 	char src[] = "Piscina 42";
 	char dest[20] = {0};
@@ -51,4 +51,4 @@ int	main(void)
 	printf("Após rodar a função: \n");
 	printf("src = %s\n", src);
 	printf("dest = %s\n", dest);
-}
+} */

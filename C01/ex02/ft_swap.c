@@ -6,11 +6,11 @@
 /*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 21:16:24 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/03/12 21:36:48 by fcampos-         ###   ########.fr       */
+/*   Updated: 2026/03/16 15:56:11 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+// #include<stdio.h>
 
 void	ft_swap(int *a, int *b)
 {

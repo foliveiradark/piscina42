@@ -6,11 +6,11 @@
 /*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 20:29:45 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/03/12 21:04:56 by fcampos-         ###   ########.fr       */
+/*   Updated: 2026/03/16 15:54:32 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+// #include<stdio.h>
 
 void	ft_ultimate_ft(int *********nbr)
 {

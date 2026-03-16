@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 16:40:10 by flavio            #+#    #+#             */
-/*   Updated: 2026/03/14 17:08:30 by flavio           ###   ########.fr       */
+/*   Updated: 2026/03/16 15:33:45 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
+// #include<unistd.h>
+// #include<stdio.h>
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int i;
-	int temp;
+	int	i;
+	int	temp;
 
 	i = 0;
-	while(i < size - 1)
+	while (i < size - 1)
 	{
 		if (tab[i] > tab[i + 1])
 		{
@@ -33,7 +33,7 @@ void	ft_sort_int_tab(int *tab, int size)
 	}
 }
 
-int	main(void)
+/* int	main(void)
 {
 	int tab[9] = {8, 4, 2, 9, 5, 6, 1, 3, 7};
 	int i = 0;
@@ -58,4 +58,4 @@ int	main(void)
 		i++;
 	}
 	printf("\n");
-}
+} */

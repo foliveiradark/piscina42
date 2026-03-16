@@ -3,36 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 14:47:54 by flavio            #+#    #+#             */
-/*   Updated: 2026/03/14 16:08:54 by flavio           ###   ########.fr       */
+/*   Updated: 2026/03/16 15:22:45 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
+// #include<unistd.h>
+// #include<stdio.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int temp;
-	int *start;
-	int *end;
+	int	temp;
+	int	*start;
+	int	*end;
 
 	start = tab;
 	end = tab + size -1;
-	while(start < end)
+	while (start < end)
 	{
 		temp = *start;
 		*start = *end;
 		*end = temp;
-
 		start++;
 		end--;
 	}
 }
 
-int	main(void)
+/* int	main(void)
 {
 	int tab [8] = {1, 2, 3, 4, 5, 6, 7, 8 };
 	int i = 0;
@@ -55,4 +54,4 @@ int	main(void)
 		i++;
 	}
 	printf("\n");
-}
+} */

@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 09:54:11 by flavio            #+#    #+#             */
-/*   Updated: 2026/03/15 10:26:17 by flavio           ###   ########.fr       */
+/*   Updated: 2026/03/16 20:27:15 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<stdio.h>
+// #include<stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
-	
+	unsigned int	i;
+
 	i = 0;
 	while (i < n && src[i] != '\0')
 	{
@@ -28,10 +27,10 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
-	return(dest);
+	return (dest);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char src[] = "Hello Pisciner";
 	char dest[20] = {0};
@@ -45,4 +44,4 @@ int	main(void)
 	printf("após rodar a função:\n");
 	printf("src = %s\n", src);
 	printf("dest = %s\n", dest);
-}
+} */

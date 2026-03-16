@@ -6,11 +6,11 @@
 /*   By: fcampos- <fcampos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 18:29:01 by fcampos-          #+#    #+#             */
-/*   Updated: 2026/03/12 19:57:05 by fcampos-         ###   ########.fr       */
+/*   Updated: 2026/03/16 15:53:10 by fcampos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 void	ft_ft(int *nbr)
 {
